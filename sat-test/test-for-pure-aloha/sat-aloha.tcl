@@ -1,12 +1,11 @@
 
-if { $argc != 4 } {
+if { $argc != 3} {
         puts stderr {usage: ns sat-aloha.tcl [basic basic_tracing poisson] node_numbe idle_time outputfile_path}
         exit 1
 }
 set test_ [lindex $argv 0]
 set n_node_ [lindex $argv 1]
 set t_ilde_ [lindex $argv 2]
-set outputfile_[lindex $agrv 3]
 puts "Running test $test_ ..."
 
 
@@ -98,7 +97,7 @@ $ns at 10.0 "finish"
 
 proc finish {} {
 	#out put some variables 
-	set f [open $outputfile_ a]
+	set f [open sat-test/test-for-pure-aloha/record.txt a]
 	set addoutputotl [new AddOutputVariables]
 	set pracload [$addoutputotl returnPracticalSentBitsNum]
 	set retrans_times [$addoutputotl returnRetransTimesSum]

@@ -1,0 +1,56 @@
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)
+can't read "agrv": no such variable
+    while executing
+"lindex $agrv 3"
+    invoked from within
+"set outputfile_[lindex $agrv 3]"
+    (file "sat-test/test-for-pure-aloha/sat-aloha.tcl" line 9)
+awk: sat-test/throughput.awk:4: fatal: cannot open file `out.tr' for reading (No such file or directory)

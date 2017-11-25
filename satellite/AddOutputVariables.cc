@@ -3,7 +3,7 @@
 static class AddOutputVariablesClass : public TclClass
 {
 public:
-	AddOutputVariablesClass();TclClass ("AddOutputVariables") {}
+	AddOutputVariablesClass():TclClass ("AddOutputVariables") {}
 	TclObject *create ( int, const char* const* )
 	{
 		return (new AddOutputVariables ());
