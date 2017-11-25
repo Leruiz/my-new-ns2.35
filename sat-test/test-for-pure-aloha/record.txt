@@ -1,3 +1,5 @@
+
+HDR_CMN(p)->size() = 210
 Pure ALOHA
 num_node = 100  idle_time = 6
 Practical sent bits 5260
