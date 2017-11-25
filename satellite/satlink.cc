@@ -523,6 +523,7 @@ void UnslottedAlohaMac::sendDown(Packet* p)
 	tx_state_ = MAC_SEND;
 	p->cur_retrans_times_ ++;
 	AddOutputVariables::prctical_sent_bits_num_ += HDR_CMN(p)->size();
+	//printf ("%d\n", HDR_CMN(p)->size());
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 	downtarget_->recv(p, this);
 
