@@ -521,6 +521,8 @@ void UnslottedAlohaMac::sendDown(Packet* p)
 
 	// Send the packet down 
 	tx_state_ = MAC_SEND;
+	p->cur_retrans_times_ ++;
+	AddOutputVariables::prctical_sent_bits_num_ += HDR_CMN(p)->size();
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 	downtarget_->recv(p, this);
 
@@ -560,6 +562,7 @@ void UnslottedAlohaMac::end_of_contention(Packet* p)
 		resume(p);
 	} else {
 		// wait for processing delay (delay_) to send packet upwards 
+		AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
 		Scheduler::instance().schedule(uptarget_, p, delay_);
 	}
 }

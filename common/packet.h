@@ -498,8 +498,10 @@ protected:
 public:
 	Packet* next_;		// for queues and the free list
 	static int hdrlen_;
+	int cur_retrans_times_;
 
-	Packet() : bits_(0), data_(0), ref_count_(0), next_(0) { }
+	Packet() : bits_(0), data_(0), ref_count_(0), next_(0) , cur_retrans_times_ (0)
+	{ }
 	inline unsigned char* bits() { return (bits_); }
 	inline Packet* copy() const;
 	inline Packet* refcopy() { ++ref_count_; return this; }
@@ -817,7 +819,7 @@ inline Packet* Packet::copy() const
 	if (data_) 
 		p->data_ = data_->copy();
 	p->txinfo_.init(&txinfo_);
- 
+	p->cur_retrans_times_ = cur_retrans_times_;
 	return (p);
 }
 
