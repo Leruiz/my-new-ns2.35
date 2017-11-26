@@ -1,0 +1,51 @@
+Practical sent bits 11545
+Sucessful Retrans Times Sum 176190
+Slotted ALOHA
+num_node = 100  idle_time = 6
+Practical sent bits 5321
+Sucessful Retrans Times Sum 35070
+stop_time 	 sent_pkts	  success_pkts
+8.9241	165	156	
+
+num_node = 50  idle_time = 2.5
+Practical sent bits 5481
+Sucessful Retrans Times Sum 51660
+stop_time 	 sent_pkts	  success_pkts
+8.9995	239	228	
+
+num_node = 100  idle_time = 2.5
+Practical sent bits 9734
+Sucessful Retrans Times Sum 81900
+stop_time 	 sent_pkts	  success_pkts
+8.9502	363	352	
+
+num_node = 150  idle_time = 2.5
+Practical sent bits 8217
+Sucessful Retrans Times Sum 129780
+stop_time 	 sent_pkts	  success_pkts
+8.9947	551	523	
+
+num_node = 200  idle_time = 2.5
+Practical sent bits 11545
+Sucessful Retrans Times Sum 176190
+stop_time 	 sent_pkts	  success_pkts
+8.9776	738	701	
+
+num_node = 300  idle_time = 2.5
+Practical sent bits 15251
+Sucessful Retrans Times Sum 283500
+stop_time 	 sent_pkts	  success_pkts
+8.9989	1069	977	
+
+num_node = 200  idle_time = 1.5
+Practical sent bits 17513
+Sucessful Retrans Times Sum 290850
+stop_time 	 sent_pkts	  success_pkts
+8.9703	1102	1014	
+
+num_node = 300  idle_time = 1.5
+Practical sent bits 17932
+Sucessful Retrans Times Sum 472710
+stop_time 	 sent_pkts	  success_pkts
+8.9997	1562	1381	
+
