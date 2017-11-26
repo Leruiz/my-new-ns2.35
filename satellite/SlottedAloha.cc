@@ -1,4 +1,11 @@
 #include "SlottedAloha.h"
+#include "sattrace.h"
+#include "satposition.h"
+#include "satgeometry.h"
+#include "satnode.h"
+#include "satroute.h"
+#include "errmodel.h"
+#include "sat-hdlc.h"
 static class SlottedAlohaClass : public TclClass {
 public:
 	SlottedAlohaClass() : TclClass("Mac/Sat/SlottedAloha") {}
@@ -7,13 +14,6 @@ public:
 	}
 } sat_class_SlottedAloha;
 
-SlottedAloha::SlottedAloha() : SatMac(), tx_state_(MAC_IDLE),
-    rx_state_(MAC_IDLE), rtx_(0), end_of_contention_(0)
-{
-	bind_time("mean_backoff_", &mean_backoff_);
-	bind("rtx_limit_", &rtx_limit_);
-	bind_time("send_timeout_", &send_timeout_);
-}
 SlottedAloha::SlottedAloha() : SatMac(), tx_state_(MAC_IDLE),
     rx_state_(MAC_IDLE), rtx_(0), end_of_contention_(0)
 {
