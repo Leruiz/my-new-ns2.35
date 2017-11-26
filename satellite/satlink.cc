@@ -518,7 +518,7 @@ void UnslottedAlohaMac::sendDown(Packet* p)
 	assert (bandwidth_ != 0);
 	txt = txtime(packetsize_);
         HDR_MAC(p)->txtime() = txt;
-
+        printf("%f\n",txt);
 	// Send the packet down 
 	tx_state_ = MAC_SEND;
 	p->cur_retrans_times_ ++;
