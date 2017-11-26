@@ -182,6 +182,7 @@ public:
 	virtual void installTap(Tap *t) { tap_ = t; }
 	
 	inline double txtime(int bytes) {
+		printf("%d\n bandwidth_ ",bandwidth_);
 		return (8. * bytes / bandwidth_);
 	}
  	inline double txtime(Packet* p) {
