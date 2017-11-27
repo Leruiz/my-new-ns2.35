@@ -110,10 +110,10 @@ $n1 set-position 0
 
 # Place 50 terminals at 100 different locations
 $ns node-config -satNodeType terminal
-set num_nodes	100
+set num_nodes	2000
 for {set a 1} {$a <= $num_nodes} {incr a} {
 	set n($a) [$ns node]
-	$n($a) set-position [expr -15 + $a * 0.3] [expr 15 - $a * 0.3]
+	$n($a) set-position [expr -15 + $a * 0.03] [expr 15 - $a * 0.03]
 	$n($a) add-gsl geo $opt(ll) $opt(ifq) $opt(qlim) $opt(mac) $opt(bw_up) \
   		$opt(phy) [$n1 set downlink_] [$n1 set uplink_]
 }
@@ -132,7 +132,7 @@ for {set a 1} {$a <= $num_nodes} {incr a} {
 	if {$test_ == "poisson"} {
 		$exp($a) set rate_ 10000Mb
 		$exp($a) set burst_time_ 0
-		$exp($a) set idle_time_ 5 
+		$exp($a) set idle_time_ 1 
 	}
 
 	set null($a) [new Agent/Null]
@@ -148,7 +148,7 @@ $ns trace-all-satlinks $outfile
 set satrouteobject_ [new SatRouteObject]
 $satrouteobject_ compute_routes
 
-$ns at 100.0 "finish"
+$ns at 10.0 "finish"
 
 proc finish {} {
 	global ns outfile 

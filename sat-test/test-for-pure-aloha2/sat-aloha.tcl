@@ -18,8 +18,8 @@ set ns [new Simulator]
 Mac/Sat/PureAloha set mean_backoff_ 0.01s ; # mean exponential backoff time(s)
 Mac/Sat/PureAloha set rtx_limit_ 10; # max number of retrans. attempted 
 Mac/Sat/PureAloha set send_timeout_ 270ms; # resend if send times out
-Mac/Sat/PureAloha set aloha_band_width_ 0.1Mb; # so, the real bandwidth = 0.1Mb
-Mac/Sat/PureAloha set pkt_bit_length_ 168; # pkt length = 168 bits
+Mac/Sat/PureAloha set aloha_bandwidth_ 0.1Mb; # so, the real bandwidth = 0.1Mb
+Mac/Sat/PureAloha set pkt_bit_length_ 1680; # pkt length = 168 bits
 
 if { $test_ == "basic"} {
 	Mac/Sat set trace_collisions_ false
@@ -106,8 +106,6 @@ proc finish {} {
 	set addoutputotl [new AddOutputVariables]
 	set pracload [$addoutputotl returnPracticalSentBitsNum]
 	set retrans_times [$addoutputotl returnRetransTimesSum]
-	puts $f "Bit Duration $bit_duration_"
-	puts $f "pkt length of bits $pkt_bit_length_"
 	puts $f "Practical sent bits $pracload"
 	puts $f "Sucessful Retrans Times Sum $retrans_times"
 	close $f
