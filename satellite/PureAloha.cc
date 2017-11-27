@@ -165,6 +165,7 @@ void PureAloha::end_of_contention(Packet* p)
 	} else {
 		// wait for processing delay (delay_) to send packet upwards
 		AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
+		AddOutputVariables::sucess_pkt_num_ ++;
 		Scheduler::instance().schedule(uptarget_, p, delay_);
 	}
 }

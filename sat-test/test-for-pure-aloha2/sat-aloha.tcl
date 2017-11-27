@@ -106,8 +106,10 @@ proc finish {} {
 	set addoutputotl [new AddOutputVariables]
 	set pracload [$addoutputotl returnPracticalSentBitsNum]
 	set retrans_times [$addoutputotl returnRetransTimesSum]
+	set sucess_pkt_num [$addoutputotl returnSucessPktNum]
 	puts $f "Practical sent bits $pracload"
 	puts $f "Sucessful Retrans Times Sum $retrans_times"
+	puts $f "Successful Pkt Number $sucess_pkt_num"
 	close $f
 	
 	global ns outfile 
