@@ -26,7 +26,8 @@ PureAloha::PureAloha() : SatMac(), tx_state_(MAC_IDLE),
 	bind_time("mean_backoff_", &mean_backoff_);
 	bind("rtx_limit_", &rtx_limit_);
 	bind_time("send_timeout_", &send_timeout_);
-	bind_time("bit_duration_", &bit_duration_);
+	//bind_time("bit_duration_", &bit_duration_);
+	bind_bw("aloha_bandwidth_", &aloha_bandwidth_);
 	bind("pkt_bit_length_", &pkt_bit_length_);
 }
 
@@ -116,7 +117,7 @@ void PureAloha::sendDown(Packet* p)
 	assert (bandwidth_ != 0);
 	txt = txtime(packetsize_);
 	*/
-	txt = pkt_bit_length_ * bit_duration_;
+	txt = pkt_bit_length_ / aloha_bandwidth_;
 
     HDR_MAC(p)->txtime() = txt;
 	// Send the packet down
