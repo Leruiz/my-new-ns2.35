@@ -1,78 +1,78 @@
 Slotted ALOHA
 num_node = 100  idle_time = 3
-PracLoad = 428400
-RetransTimes = 4544
-Successful Pkt Number = 196
+PracLoad = 396480
+RetransTimes = 4585
+Successful Pkt Number = 194
 stop_time 	 sent_pkts	  success_pkts
-5.9947	209	196	
+5.9833	204	194	
 
 num_node = 100  idle_time = 2
-PracLoad = 593040
-RetransTimes = 5475
-Successful Pkt Number = 284
+PracLoad = 635040
+RetransTimes = 5631
+Successful Pkt Number = 289
 stop_time 	 sent_pkts	  success_pkts
-5.9982	305	284	
+5.9996	309	289	
 
 num_node = 100  idle_time = 1
-PracLoad = 1918560
-RetransTimes = 8210
-Successful Pkt Number = 510
+PracLoad = 1775760
+RetransTimes = 8440
+Successful Pkt Number = 530
 stop_time 	 sent_pkts	  success_pkts
-5.9948	632	510	
+5.9984	609	530	
 
 num_node = 100  idle_time = 0.5
-PracLoad = 3158400
-RetransTimes = 6714
-Successful Pkt Number = 607
+PracLoad = 3114720
+RetransTimes = 7142
+Successful Pkt Number = 600
 stop_time 	 sent_pkts	  success_pkts
-5.9981	853	607	
+5.9970	849	600	
 
 num_node = 200  idle_time = 0.5
-PracLoad = 6513360
-RetransTimes = 6506
-Successful Pkt Number = 424
+PracLoad = 6506640
+RetransTimes = 6972
+Successful Pkt Number = 473
 stop_time 	 sent_pkts	  success_pkts
-5.9998	1239	424	
+5.9981	1277	473	
 
 num_node = 300  idle_time = 0.5
-PracLoad = 9917040
-RetransTimes = 2405
-Successful Pkt Number = 220
+PracLoad = 9890160
+RetransTimes = 3099
+Successful Pkt Number = 287
 stop_time 	 sent_pkts	  success_pkts
-5.9990	1697	220	
+6.0000	1716	287	
 
 num_node = 400  idle_time = 0.5
-PracLoad = 13302240
-RetransTimes = 1846
-Successful Pkt Number = 113
+PracLoad = 13292160
+RetransTimes = 2318
+Successful Pkt Number = 145
 stop_time 	 sent_pkts	  success_pkts
-5.9999	2200	113	
+5.9984	2212	145	
 
 num_node = 500  idle_time = 0.5
-PracLoad = 16672320
-RetransTimes = 742
-Successful Pkt Number = 60
+PracLoad = 16630320
+RetransTimes = 980
+Successful Pkt Number = 67
 stop_time 	 sent_pkts	  success_pkts
-5.9998	2733	60	
+5.9996	2728	67	
 
 num_node = 550  idle_time = 0.5
-PracLoad = 18340560
-RetransTimes = 552
-Successful Pkt Number = 52
+PracLoad = 18249840
+RetransTimes = 356
+Successful Pkt Number = 39
 stop_time 	 sent_pkts	  success_pkts
-5.9999	2997	52	
+6.0000	2979	39	
 
 num_node = 600  idle_time = 0.5
-PracLoad = 20067600
-RetransTimes = 209
-Successful Pkt Number = 27
+PracLoad = 19926480
+RetransTimes = 202
+Successful Pkt Number = 25
 stop_time 	 sent_pkts	  success_pkts
-5.9999	3274	27	
+5.9999	3254	25	
 
 num_node = 650  idle_time = 0.5
-PracLoad = 21665280
-RetransTimes = 205
-Successful Pkt Number = 19
+PracLoad = 21609840
+RetransTimes = 286
+Successful Pkt Number = 29
 stop_time 	 sent_pkts	  success_pkts
-5.9999	3535	19	
+5.9999	3519	29	
 
