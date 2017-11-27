@@ -133,6 +133,7 @@ void SlottedAloha::sendDown(Packet* p)
 		if(slot_beg < NOW) abort("slot_beg < NOW");
 		send_timer_.resched(slot_beg - NOW);
 	}
+	printf("SEND NOW = %f \n", NOW * 500);
 	downtarget_->recv(p, this);
 
 	// Set a timer-- if we do not hear our own transmission within this
