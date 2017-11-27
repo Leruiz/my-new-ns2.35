@@ -47,3 +47,72 @@ Sucessful Retrans Times Sum 2709630
 stop_time 	 sent_pkts	  success_pkts
 5.9999	3537	29	
 
+Pure ALOHA
+num_node = 100  idle_time = 0.5
+Practical sent bits 6575
+Sucessful Retrans Times Sum 398790
+Successful Pkt Number 6575
+stop_time 	 sent_pkts	  success_pkts
+5.9980	834	571	
+
+num_node = 200  idle_time = 0.5
+Practical sent bits 5953
+Sucessful Retrans Times Sum 814800
+Successful Pkt Number 5953
+stop_time 	 sent_pkts	  success_pkts
+6.0000	1250	416	
+
+num_node = 300  idle_time = 0.5
+Practical sent bits 2528
+Sucessful Retrans Times Sum 1246770
+Successful Pkt Number 2528
+stop_time 	 sent_pkts	  success_pkts
+5.9999	1720	237	
+
+num_node = 400  idle_time = 0.5
+Practical sent bits 2417
+Sucessful Retrans Times Sum 1664460
+Successful Pkt Number 2417
+stop_time 	 sent_pkts	  success_pkts
+5.9996	2222	159	
+
+num_node = 500  idle_time = 0.5
+Practical sent bits 881
+Sucessful Retrans Times Sum 2095590
+Successful Pkt Number 881
+stop_time 	 sent_pkts	  success_pkts
+5.9993	2745	68	
+
+num_node = 550  idle_time = 0.5
+Practical sent bits 487
+Sucessful Retrans Times Sum 2308110
+Successful Pkt Number 487
+stop_time 	 sent_pkts	  success_pkts
+5.9998	3020	48	
+
+num_node = 600  idle_time = 0.5
+Practical sent bits 188
+Sucessful Retrans Times Sum 2506980
+Successful Pkt Number 188
+stop_time 	 sent_pkts	  success_pkts
+5.9998	3268	20	
+
+num_node = 650  idle_time = 0.5
+Practical sent bits 301
+Sucessful Retrans Times Sum 2709630
+Successful Pkt Number 301
+stop_time 	 sent_pkts	  success_pkts
+5.9999	3537	29	
+
+Practical sent bits 5953
+Sucessful Retrans Times Sum 6518400
+Successful Pkt Number 5953
+Practical sent bits 5953
+Sucessful Retrans Times Sum 6518400
+Successful Pkt Number 5953
+Practical sent bits 5953
+Sucessful Retrans Times Sum 6518400
+Successful Pkt Number 5953
+Practical sent bits 5953
+Sucessful Retrans Times Sum 6518400
+Successful Pkt Number 5953
