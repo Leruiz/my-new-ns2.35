@@ -127,6 +127,12 @@ void SlottedAloha::sendDown(Packet* p)
 
 	//printf ("%d\n", HDR_CMN(p)->size());
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
+
+	double slot_beg = wait_for_slot_begin(0);
+	if(slot_beg != NOW){
+		if(slot_beg < NOW) abort("slot_beg < NOW");
+		send_timer_.resched(slot_beg - NOW);
+	}
 	downtarget_->recv(p, this);
 
 	// Set a timer-- if we do not hear our own transmission within this
@@ -204,7 +210,10 @@ void SlottedAloha::backoff(double delay)
 		resume(snd_pkt_);
 	}
 }
-
+void SlottedAloha::slot_begin_timer()
+{
+	sendDown(snd_pkt_);
+}
 double SlottedAloha::wait_for_slot_begin(double origin_delay)
 {
 	//compute the delay from now to the beginning of the next slot

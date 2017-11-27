@@ -9,6 +9,7 @@ public:
 	void recv_timer();
 	void end_of_contention(Packet* p);
 	double wait_for_slot_begin(double origin_delay);//compute the delay from now to the beginning of the next slot
+	void slot_begin_timer();
 protected:
 	virtual void backoff(double delay=0);
 	Packet* snd_pkt_;	// stores packet currently being sent
