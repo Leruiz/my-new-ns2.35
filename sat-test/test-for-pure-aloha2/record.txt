@@ -61,3 +61,25 @@ Successful Pkt Number = 29
 stop_time 	 sent_pkts	  success_pkts
 5.9999	3537	29	
 
+ add low load tests
+num_node = 100  idle_time = 1
+PracLoad = 1730400
+RetransTimes = 8087
+Successful Pkt Number = 497
+stop_time 	 sent_pkts	  success_pkts
+5.9984	591	497	
+
+num_node = 100  idle_time = 2
+PracLoad = 621600
+RetransTimes = 5124
+Successful Pkt Number = 296
+stop_time 	 sent_pkts	  success_pkts
+5.9707	314	296	
+
+num_node = 100  idle_time = 3
+PracLoad = 418320
+RetransTimes = 4686
+Successful Pkt Number = 200
+stop_time 	 sent_pkts	  success_pkts
+5.9947	211	200	
+
