@@ -7,6 +7,10 @@
 #include "errmodel.h"
 #include "sat-hdlc.h"
 #include "AddOutputVariables.h"
+#include "A_SuccPktNum.h"
+#include "A_PracLoad.h"
+#include "A_RetransTimes.h"
+
 
 static class PureAlohaClass : public TclClass {
 public:
@@ -125,6 +129,7 @@ void PureAloha::sendDown(Packet* p)
 	tx_state_ = MAC_SEND;
 	p->cur_retrans_times_ ++;
 	//AddOutputVariables::prctical_sent_bits_num_ += pkt_bit_length_;
+	A_PracLoad::prctical_sent_bits_num_ += pkt_bit_length_;
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 	downtarget_->recv(p, this);
 
@@ -136,8 +141,6 @@ void PureAloha::sendDown(Packet* p)
 
 // Called when contention period ends
 
-static int retrans_tm_ = 0;
-static int sucess_pkt_ = 0;
 void PureAloha::end_of_contention(Packet* p)
 {
 	rx_state_ = MAC_IDLE;
@@ -168,16 +171,9 @@ void PureAloha::end_of_contention(Packet* p)
 	} else {
 		// wait for processing delay (delay_) to send packet upwards
 
-		AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
-		AddOutputVariables::sucess_pkt_num_ ++;
+		A_RetransTimes::successful_retrans_times_sum_ += p->cur_retrans_times_;
+		A_SuccPktNum::sucess_pkt_num_ ++;
 
-		retrans_tm_ += AddOutputVariables::sucess_pkt_num_;
-				sucess_pkt_ ++;
-
-		printf("retrans_tm = %d\n", retrans_tm_);
-		printf("AddOutputVariables::successful_retrans_times_sum_ = %d\n", AddOutputVariables::successful_retrans_times_sum_);
-		printf("sucess_pkt_ = %d\n", sucess_pkt_);
-		printf("AddOutputVariables::sucess_pkt_num_ = %d\n", AddOutputVariables::sucess_pkt_num_);
 		Scheduler::instance().schedule(uptarget_, p, delay_);
 	}
 }
