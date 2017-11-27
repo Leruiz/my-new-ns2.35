@@ -16,9 +16,9 @@ set ns [new Simulator]
 
 # Global configuration parameters for Aloha (also settable in ns-sat.tcl)
 Mac/Sat/PureAloha set mean_backoff_ 0.01s ; # mean exponential backoff time(s)
-Mac/Sat/PureAloha set rtx_limit_ 10; # max number of retrans. attempted 
+Mac/Sat/PureAloha set rtx_limit_ 3; # max number of retrans. attempted 
 Mac/Sat/PureAloha set send_timeout_ 270ms; # resend if send times out
-Mac/Sat/PureAloha set aloha_bandwidth_ 0.1Mb; # so, the real bandwidth = 0.1Mb
+Mac/Sat/PureAloha set aloha_bandwidth_ 1Mb; # so, the real bandwidth = 0.1Mb
 Mac/Sat/PureAloha set pkt_bit_length_ 1680; # pkt length = 168 bits
 
 if { $test_ == "basic"} {
@@ -81,7 +81,7 @@ for {set a 1} {$a <= $num_nodes} {incr a} {
 	$exp($a) set rate_ 1Kb
 	if {$test_ == "poisson"} {
 		$exp($a) set rate_ 10Mb
-		$exp($a) set burst_time_ 0
+		$exp($a) set burst_time_ 0 
 		$exp($a) set idle_time_ $t_idle_
 	}
 
@@ -98,7 +98,7 @@ $ns trace-all-satlinks $outfile
 set satrouteobject_ [new SatRouteObject]
 $satrouteobject_ compute_routes
 
-$ns at 6.5 "finish"
+$ns at 7.0 "finish"
 
 proc finish {} {
 	#out put some variables 

@@ -1,7 +1,6 @@
 BEGIN {
 	success_pkts=0;
 	sent_pkts=0;
-	sum1 = 0;
 }
 {
 
@@ -21,15 +20,13 @@ BEGIN {
 
 			a[pkt_id] = 1;
 			sent_pkts ++;
-			sum1 ++;
 
 	}
 
     	if(action=="r" ){
     		success_pkts ++;
-		st = time-1;
-		sum1 = 0;
     	}
+	st = time - 1;
 }
 END{
 	printf("stop_time \t sent_pkts\t  success_pkts\n");
