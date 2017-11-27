@@ -124,7 +124,7 @@ void PureAloha::sendDown(Packet* p)
 	// Send the packet down
 	tx_state_ = MAC_SEND;
 	p->cur_retrans_times_ ++;
-	AddOutputVariables::prctical_sent_bits_num_ += pkt_bit_length_;
+	//AddOutputVariables::prctical_sent_bits_num_ += pkt_bit_length_;
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 	downtarget_->recv(p, this);
 

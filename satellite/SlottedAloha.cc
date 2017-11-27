@@ -6,6 +6,7 @@
 #include "satroute.h"
 #include "errmodel.h"
 #include "sat-hdlc.h"
+#include "AddOutputVariables.h"
 static class SlottedAlohaClass : public TclClass {
 public:
 	SlottedAlohaClass() : TclClass("Mac/Sat/SlottedAloha") {}

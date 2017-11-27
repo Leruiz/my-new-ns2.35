@@ -11,19 +11,21 @@ public:
 }class_addoutputvariables_obj;
 
 int AddOutputVariables :: command(int argc, const char* const* argv )
+
 {
 	Tcl&tcl = Tcl :: instance();
-	if(strcmp(argv[1], "returnRetransTimesSum"))
+	
+ 	if(strcmp(argv[1], "returnRetransTimesSum"))
 	{
-		tcl.resultf("%d",successful_retrans_times_sum_);
+		tcl.resultf("successful_retrans_times_sum_ = %d\n",successful_retrans_times_sum_);
 	}
 	else if(strcmp(argv[1], "returnPracticalSentBitsNum"))
 	{
-		tcl.resultf("%d",prctical_sent_bits_num_);
+		tcl.resultf("prctical_sent_bits_num_ = %d\n",prctical_sent_bits_num_);
 	}
-	else if(strcmp(argv[1], "returnSucessPktNum"))
-	{
-		tcl.resultf("%d",sucess_pkt_num_);
+	else if(strcmp(argv[1], "returnSuccPktNum")){
+		printf("into\n");
+		tcl.resultf("sucess_pkt_num_ = %d\n",sucess_pkt_num_);
 	}
 	return TCL_OK;
 };
