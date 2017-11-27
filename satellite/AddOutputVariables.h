@@ -2,7 +2,7 @@
 #include "object.h"
 #include "lib/bsd-list.h"
 
-class AddOutputVariables :  public TclObject
+static class AddOutputVariables :  public TclObject
 {
 public :
 	static int successful_retrans_times_sum_ ;
