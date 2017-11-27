@@ -76,3 +76,81 @@ Successful Pkt Number = 29
 stop_time 	 sent_pkts	  success_pkts
 5.9999	3519	29	
 
+Slotted ALOHA
+num_node = 100  idle_time = 3
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9845	205	191	
+
+num_node = 100  idle_time = 2
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9979	310	295	
+
+num_node = 100  idle_time = 1
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9995	593	476	
+
+num_node = 100  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+6.0000	804	545	
+
+num_node = 200  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+6.0000	1242	399	
+
+num_node = 300  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9991	1703	205	
+
+num_node = 400  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9995	2198	109	
+
+num_node = 500  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+6.0000	2717	36	
+
+num_node = 550  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9998	2990	26	
+
+num_node = 600  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+6.0000	3260	21	
+
+num_node = 650  idle_time = 0.5
+PracLoad = 0
+RetransTimes = 0
+Successful Pkt Number = 0
+stop_time 	 sent_pkts	  success_pkts
+5.9988	3532	13	
+
