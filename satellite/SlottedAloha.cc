@@ -129,9 +129,12 @@ void SlottedAloha::sendDown(Packet* p)
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 
 	double slot_beg = wait_for_slot_begin(0);
-	if(slot_beg != NOW){
-		if(slot_beg < NOW) abort("slot_beg < NOW");
-		send_timer_.resched(slot_beg - NOW);
+	if(slot_beg != 0){
+		if(slot_beg < 0){
+			printf("slot_beg < 0\n");
+			 abort();
+		}
+		send_timer_.resched(slot_beg);
 	}
 	printf("SEND NOW = %f \n", NOW * 500);
 	downtarget_->recv(p, this);

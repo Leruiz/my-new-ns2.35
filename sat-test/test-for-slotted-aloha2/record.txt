@@ -1,0 +1,41 @@
+Slotted ALOHA
+stop_time	sent_pkts	success_pkts
+num_node = 100  idle_time = 3
+0.0730	1	0	
+num_node = 100  idle_time = 2
+0.0487	1	0	
+num_node = 100  idle_time = 1
+0.0245	1	0	
+num_node = 100  idle_time = 0.5
+0.0123	1	0	
+num_node = 200  idle_time = 0.5
+0.0017	1	0	
+num_node = 300  idle_time = 0.5
+0.0017	1	0	
+num_node = 400  idle_time = 0.5
+0.0003	1	0	
+num_node = 500  idle_time = 0.5
+Slotted ALOHA
+stop_time	sent_pkts	success_pkts
+num_node = 100  idle_time = 3
+5.9833	204	194	
+num_node = 100  idle_time = 2
+5.9996	309	289	
+num_node = 100  idle_time = 1
+5.9984	609	530	
+num_node = 100  idle_time = 0.5
+5.9970	849	600	
+num_node = 200  idle_time = 0.5
+5.9981	1277	473	
+num_node = 300  idle_time = 0.5
+6.0000	1716	287	
+num_node = 400  idle_time = 0.5
+5.9984	2212	145	
+num_node = 500  idle_time = 0.5
+5.9996	2728	67	
+num_node = 550  idle_time = 0.5
+6.0000	2979	39	
+num_node = 600  idle_time = 0.5
+5.9999	3254	25	
+num_node = 650  idle_time = 0.5
+5.9999	3519	29	
