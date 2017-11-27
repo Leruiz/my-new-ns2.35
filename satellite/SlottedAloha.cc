@@ -208,8 +208,8 @@ void SlottedAloha::backoff(double delay)
 double SlottedAloha::wait_for_slot_begin(double origin_delay)
 {
 	//compute the delay from now to the beginning of the next slot
-	//set the slot duration = 0.001 s;
-	int next_slot_seq = (int)((origin_delay + NOW) * 1000) + 1;
-	double wait_slot_delay = next_slot_seq * 0.001 - NOW;
+	//set the slot duration = 0.002 s;
+	int next_slot_seq = (int)((origin_delay + NOW) * 500) + 1;
+	double wait_slot_delay = next_slot_seq * 0.002 - NOW;
 	return wait_slot_delay;
 }
