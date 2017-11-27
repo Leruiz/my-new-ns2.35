@@ -6,6 +6,8 @@
 #include "satroute.h"
 #include "errmodel.h"
 #include "sat-hdlc.h"
+#include <map>
+static map<int,int> mp;
 
 static class PureAlohaClass : public TclClass {
 public:
@@ -163,8 +165,14 @@ void PureAloha::end_of_contention(Packet* p)
 		resume(p);
 	} else {
 		// wait for processing delay (delay_) to send packet upwards
-		AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
-		AddOutputVariables::sucess_pkt_num_ ++;
+
+		if(mp.find(p->uid_) == mp.end())
+		{
+			AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
+			AddOutputVariables::sucess_pkt_num_ ++;
+			mp[p->uid_] = 1;
+		}
+
 		Scheduler::instance().schedule(uptarget_, p, delay_);
 	}
 }
