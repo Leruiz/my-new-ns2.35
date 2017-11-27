@@ -7,6 +7,10 @@
 #include "errmodel.h"
 #include "sat-hdlc.h"
 #include "AddOutputVariables.h"
+#include "A_SuccPktNum.h"
+#include "A_PracLoad.h"
+#include "A_RetransTimes.h"
+
 static class SlottedAlohaClass : public TclClass {
 public:
 	SlottedAlohaClass() : TclClass("Mac/Sat/SlottedAloha") {}
@@ -21,6 +25,9 @@ SlottedAloha::SlottedAloha() : SatMac(), tx_state_(MAC_IDLE),
 	bind_time("mean_backoff_", &mean_backoff_);
 	bind("rtx_limit_", &rtx_limit_);
 	bind_time("send_timeout_", &send_timeout_);
+
+	bind_bw("aloha_bandwidth_", &aloha_bandwidth_);
+		bind("pkt_bit_length_", &pkt_bit_length_);
 }
 
 void SlottedAloha::send_timer()
@@ -103,15 +110,21 @@ void SlottedAloha::sendDown(Packet* p)
 {
 	double txt;
 	// compute transmission delay:
-	int packetsize_ = HDR_CMN(p)->size() + LINK_HDRSIZE;
+/*	int packetsize_ = HDR_CMN(p)->size() + LINK_HDRSIZE;
 	assert (bandwidth_ != 0);
-	txt = txtime(packetsize_);
+	txt = txtime(packetsize_);*/
+
+	txt = pkt_bit_length_ / aloha_bandwidth_;
+
         HDR_MAC(p)->txtime() = txt;
         //printf("%f\n",txt);
 	// Send the packet down
 	tx_state_ = MAC_SEND;
 	p->cur_retrans_times_ ++;
-	AddOutputVariables::prctical_sent_bits_num_ += HDR_CMN(p)->size();
+
+	//AddOutputVariables::prctical_sent_bits_num_ += HDR_CMN(p)->size();
+	A_PracLoad::prctical_sent_bits_num_ += pkt_bit_length_;
+
 	//printf ("%d\n", HDR_CMN(p)->size());
 	snd_pkt_ = p->copy();  // save a copy in case it gets retransmitted
 	downtarget_->recv(p, this);
@@ -159,7 +172,11 @@ void SlottedAloha::end_of_contention(Packet* p)
 		resume(p);
 	} else {
 		// wait for processing delay (delay_) to send packet upwards
-		AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
+		//AddOutputVariables::successful_retrans_times_sum_ += p->cur_retrans_times_;
+
+		A_RetransTimes::successful_retrans_times_sum_ += p->cur_retrans_times_;
+		A_SuccPktNum::sucess_pkt_num_ ++;
+
 		Scheduler::instance().schedule(uptarget_, p, delay_);
 	}
 }

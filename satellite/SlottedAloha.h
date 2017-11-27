@@ -20,4 +20,8 @@ protected:
 	double mean_backoff_;	// Set in OTcl-- mean backoff time
 	double send_timeout_;	// Set in OTcl-- time out after this interval
 	double end_of_contention_; // Saves time that contention will be over
+
+	double aloha_bandwidth_;
+	int pkt_bit_length_;
 };
+
