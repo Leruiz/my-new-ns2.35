@@ -45,7 +45,7 @@
 #include "queue.h"
 #include "net-interface.h"
 #include "timer-handler.h"
-#include "AddOutputVariables.h"
+//#include "AddOutputVariables.h"
 #define LINK_HDRSIZE 16 
 
 // Link types

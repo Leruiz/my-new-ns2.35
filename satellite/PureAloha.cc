@@ -6,7 +6,7 @@
 #include "satroute.h"
 #include "errmodel.h"
 #include "sat-hdlc.h"
-
+#include "AddOutputVariables.h"
 static class PureAlohaClass : public TclClass {
 public:
 	PureAlohaClass() : TclClass("Mac/Sat/PureAloha") {}

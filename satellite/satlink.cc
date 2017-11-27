@@ -56,7 +56,7 @@ static const char rcsid[] =
 #include "satroute.h"
 #include "errmodel.h"
 #include "sat-hdlc.h"
-
+#include "AddOutputVariables.h"
 /*==========================================================================*/
 /*
  * _SatLinkHead

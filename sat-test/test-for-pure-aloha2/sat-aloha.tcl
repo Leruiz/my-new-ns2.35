@@ -12,8 +12,6 @@ puts "Running test $test_ ..."
 global ns
 set ns [new Simulator]
 
-
-
 # Global configuration parameters for Aloha (also settable in ns-sat.tcl)
 Mac/Sat/PureAloha set mean_backoff_ 0.01s ; # mean exponential backoff time(s)
 Mac/Sat/PureAloha set rtx_limit_ 3; # max number of retrans. attempted 
