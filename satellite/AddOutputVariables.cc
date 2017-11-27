@@ -20,7 +20,8 @@ int AddOutputVariables :: command(int argc, const char* const* argv )
 	else if(strcmp(argv[1], "returnPracticalSentBitsNum"))
 	{
 		tcl.resultf("%d",prctical_sent_bits_num_);
-	}else if(strcmp(argv[1], "returnSucessPktNum"))
+	}
+	else if(strcmp(argv[1], "returnSucessPktNum"))
 	{
 		tcl.resultf("%d",sucess_pkt_num_);
 	}
