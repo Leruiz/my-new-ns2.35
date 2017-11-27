@@ -101,13 +101,22 @@ $ns at 7.0 "finish"
 proc finish {} {
 	#out put some variables 
 	set f [open sat-test/test-for-pure-aloha2/record.txt a]
-	set addoutputotl [new AddOutputVariables]
-	set pracload [$addoutputotl returnPracticalSentBitsNum]
-	set retrans_times [$addoutputotl returnRetransTimesSum]
-	set sucess_pkt_num [$addoutputotl returnSucessPktNum]
-	puts $f "Practical sent bits $pracload"
-	puts $f "Sucessful Retrans Times Sum $retrans_times"
-	puts $f "Successful Pkt Number $sucess_pkt_num"
+	#set addoutputotl [new AddOutputVariables]
+	#set pracload [$addoutputotl returnPracticalSentBitsNum]
+	#set retrans_times [$addoutputotl returnRetransTimesSum]
+	#set sucess_pkt_num [$addoutputotl returnSucessPktNum]
+	
+	set pracloadotl [new A_PracLoad]
+	set pracload [$pracloadotl returnPracticalSentBitsNum]
+	puts $f "PracLoad = $pracload"
+	
+	set retranstimesotl [new A_RetransTimes]
+	set retranstimes [$retranstimesotl returnRetransTimesSum]
+	puts $f "RetransTimes = $retrans_times"
+	
+	set succpktnumotl [new A_SuccPktNum]
+	set sucess_pkt_num [$succpktnumotl returnSucessPktNum]
+	puts $f "Successful Pkt Number = $sucess_pkt_num"
 	close $f
 	
 	global ns outfile 
