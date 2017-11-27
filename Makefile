@@ -285,7 +285,7 @@ OBJ_CC = \
 	satellite/satgeometry.o satellite/sathandoff.o \
 	satellite/satlink.o satellite/satnode.o \
 	satellite/satposition.o satellite/satroute.o \
-	satellite/sattrace.o satellite/AddOutputVariables.o\
+	satellite/sattrace.o satellite/AddOutputVariables.o satellite/SlottedAloha.o \
 	rap/raplist.o rap/rap.o rap/media-app.o rap/utilities.o \
 	common/fsm.o tcp/tcp-abs.o \
 	diffusion/diffusion.o diffusion/diff_rate.o diffusion/diff_prob.o \
