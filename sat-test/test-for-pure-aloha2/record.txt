@@ -116,3 +116,6 @@ Successful Pkt Number 5953
 Practical sent bits 5953
 Sucessful Retrans Times Sum 6518400
 Successful Pkt Number 5953
+Practical sent bits 5953
+Sucessful Retrans Times Sum 6518400
+Successful Pkt Number 5953
