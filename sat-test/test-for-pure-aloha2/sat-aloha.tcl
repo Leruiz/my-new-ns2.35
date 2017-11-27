@@ -18,7 +18,7 @@ set ns [new Simulator]
 Mac/Sat/PureAloha set mean_backoff_ 0.01s ; # mean exponential backoff time(s)
 Mac/Sat/PureAloha set rtx_limit_ 10; # max number of retrans. attempted 
 Mac/Sat/PureAloha set send_timeout_ 270ms; # resend if send times out
-Mac/Sat/PureAloha set bit_duration_ 0.1ms; # so, the real bandwidth = 0.1Mb
+Mac/Sat/PureAloha set aloha_band_width_ 0.1Mb; # so, the real bandwidth = 0.1Mb
 Mac/Sat/PureAloha set pkt_bit_length_ 168; # pkt length = 168 bits
 
 if { $test_ == "basic"} {
