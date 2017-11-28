@@ -30,10 +30,11 @@ retrans_time = 0;
 		start = start_time[packet_id];  
 		end = end_time[packet_id];  
 		packet_duration = end - start;   
-		
+	printf ("packet_duraiontion = %f\n",packet_duration);	
 		if ( start < end )
 			retrans_time = retrans_time + (end - start) / 0.27;
-	}  
+	}
+	printf ("%f\n",retrans_time);  
 	printf("ave_retrans_times\n");
 	printf("%f\n", retrans_time / highest_packet_id);
 
